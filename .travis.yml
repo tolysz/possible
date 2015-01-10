@@ -25,6 +25,7 @@ install:
  - cabal install aeson-0.8.0.2.tar.gz . --only-dependencies --enable-tests
 
 script:
+ - cabal install aeson-0.8.0.2.tar.gz
  - cabal configure --enable-tests --enable-library-coverage || cabal configure --enable-tests --enable-coverage
  - cabal build
  - cabal test
