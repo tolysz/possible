@@ -6,4 +6,7 @@ possible
 
 Three valued Data.Maybe
 
-Depends on modified aeson (i.e. one extra constructor with fields which an be intentionally "Missing"
+--
+
+-- Depends on modified aeson (i.e. one extra constructor with fields which an be intentionally "Missing"
+ask aeson to implement it for us

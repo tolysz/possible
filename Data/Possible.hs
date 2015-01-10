@@ -1,22 +1,20 @@
 
 module Data.Possible
-   (
-     Possible(MissingData, HaveNull , HaveData)
-
+   ( Possible(..)
    , possible
    , isPossibleData
    , isPossibleMissing
    , isPossibleNull
    , fromHaveData
-   ,(.:??)
+   -- ,(.:??)
    ) where
 
 import Prelude
-import Data.Aeson
+-- import Data.Aeson
 import Control.Applicative
 import Data.Maybe
-import Data.Text (Text)
-import Data.Aeson.Types (Parser)
+-- import Data.Text (Text)
+-- import Data.Aeson.Types (Parser)
 
 data Possible a = HaveNull | MissingData | HaveData a
   deriving (Eq, Ord, Show)
@@ -67,6 +65,9 @@ isPossibleNull :: Possible a -> Bool
 isPossibleNull HaveNull = True
 isPossibleNull _        = False
 
+{-
+Move it to Aeson
+
 instance (ToJSON a) => ToJSON (Possible a) where
   toJSON MissingData  = Missing
   toJSON HaveNull     = Null
@@ -81,3 +82,4 @@ instance FromJSON a => FromJSON (Possible a) where
 (.:??) :: (FromJSON a) => Object -> Text -> Parser (Possible a)
 (.:??) v s = v .:? s .!= MissingData
 
+-}
