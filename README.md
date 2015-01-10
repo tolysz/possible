@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/tolysz/hans-pcap.svg?branch=master)](https://travis-ci.org/tolysz/possible)
-[![Latest Version](https://img.shields.io/hackage/v/hans-pcap.svg)](https://hackage.haskell.org/package/possible)
+[![Build Status](https://travis-ci.org/tolysz/possible.svg?branch=master)](https://travis-ci.org/tolysz/possible)
+[![Latest Version](https://img.shields.io/hackage/v/possible.svg)](https://hackage.haskell.org/package/possible)
 
 possible
 ========
