@@ -7,7 +7,6 @@ module Data.Possible
    , isPossibleMissing
    , isPossibleNull
    , fromHaveData
-   -- ,(.:??)
    ) where
 
 import Prelude
@@ -64,22 +63,3 @@ isPossibleMissing _           = False
 isPossibleNull :: Possible a -> Bool
 isPossibleNull HaveNull = True
 isPossibleNull _        = False
-
-{-
-Move it to Aeson
-
-instance (ToJSON a) => ToJSON (Possible a) where
-  toJSON MissingData  = Missing
-  toJSON HaveNull     = Null
-  toJSON (HaveData a) = toJSON a
-
-maybeToPossible (Just a)  = HaveData a
-maybeToPossible Nothing = MissingData
-
-instance FromJSON a => FromJSON (Possible a) where
-   parseJSON a = maybeToPossible <$> parseJSON a
-
-(.:??) :: (FromJSON a) => Object -> Text -> Parser (Possible a)
-(.:??) v s = v .:? s .!= MissingData
-
--}
