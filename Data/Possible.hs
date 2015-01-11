@@ -37,7 +37,7 @@ instance  Monad Possible where
     (HaveData x) >>= k  = k x
 
     HaveNull     >>  _  = HaveNull
-    MissingData  >>  k  = k
+    MissingData  >>  _  = MissingData
     (HaveData _) >>  k  = k
 
     return              = HaveData
