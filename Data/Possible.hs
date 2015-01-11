@@ -1,3 +1,4 @@
+{-# LANGUAGE DeriveDataTypeable, DeriveGeneric  #-}
 
 module Data.Possible
    ( Possible(..)
@@ -10,14 +11,13 @@ module Data.Possible
    ) where
 
 import Prelude
--- import Data.Aeson
 import Control.Applicative
 import Data.Maybe
--- import Data.Text (Text)
--- import Data.Aeson.Types (Parser)
+import GHC.Generics
+import Data.Typeable
 
 data Possible a = HaveNull | MissingData | HaveData a
-  deriving (Eq, Ord, Show)
+  deriving (Show, Generic, Typeable)
 
 instance  Functor Possible where
     fmap _ HaveNull      = HaveNull

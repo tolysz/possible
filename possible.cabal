@@ -2,7 +2,7 @@
 -- documentation, see http://haskell.org/cabal/users-guide/
 
 name:                possible
-version:             0.1.0.1
+version:             0.1.0.2
 cabal-version:       >=1.10
 synopsis:            Three valued Data.Maybe
 description:         Maybe lacks the information if Nothing represents missing or empty value.
