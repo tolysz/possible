@@ -1,6 +1,6 @@
-[![travis][badge-travis]][travis]
-[![hackage][badge-hackage]][hackage]
-[![license][badge-license]][license]
+[![Build Status](https://travis-ci.org/tolysz/possible.svg?branch=master)](https://travis-ci.org/tolysz/possible)
+[![Latest Version](https://img.shields.io/hackage/v/possible.svg)](https://hackage.haskell.org/package/possible)
+
 
 possible
 ========
