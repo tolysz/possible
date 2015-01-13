@@ -13,6 +13,7 @@ The idea is to have http://en.wikipedia.org/wiki/Three-valued_logic for values.
 Depends on Aeson having missing value.
 
 --
+It is mainly used in modified [aeson](https://github.com/tolysz/aeson) where it gives the extra information about value being missing present or set to null. Modified `aeson` can derivie `{To,From}JSON` instances for it.
 
--- Depends on modified aeson (i.e. one extra constructor with fields which an be intentionally "Missing"
-ask aeson to implement it for us
+The plan is to be able to support `PATCH` from Google API
+eg. https://github.com/tolysz/video/blob/master/Google/Api/Youtube/Videos.hs
