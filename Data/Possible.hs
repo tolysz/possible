@@ -44,6 +44,8 @@ instance  Monad Possible where
     fail _              = HaveNull
 
 fromHaveData :: Possible a -> a
+fromHaveData HaveNull     = error "Maybe.fromHaveData: HaveNull"
+fromHaveData MissingData  = error "Maybe.fromHaveData: MissingData"
 fromHaveData (HaveData a) = a
 
 possible :: b -> b -> (a -> b) -> Possible a -> b
