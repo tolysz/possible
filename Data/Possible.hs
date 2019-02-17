@@ -14,6 +14,7 @@ import Control.Applicative
 import Data.Maybe
 import GHC.Generics
 import Data.Typeable
+import qualified Control.Monad.Fail as Fail
 
 data Possible a = HaveNull | MissingData | HaveData a
   deriving (Show, Generic, Typeable)
@@ -39,8 +40,9 @@ instance  Monad Possible where
     HaveNull     >>  _  = HaveNull
     MissingData  >>  _  = MissingData
     (HaveData _) >>  k  = k
-
     return              = HaveData
+
+instance Fail.MonadFail Possible where
     fail _              = HaveNull
 
 fromHaveData :: Possible a -> a
