@@ -16,4 +16,4 @@ Depends on Aeson having missing value.
 It is mainly used in modified [aeson](https://github.com/tolysz/aeson) where it gives the extra information about value being missing present or set to null. Modified `aeson` can derivie `{To,From}JSON` instances for it.
 
 The plan is to be able to support `PATCH` from Google API
-eg. https://github.com/tolysz/video/blob/master/Google/Api/Youtube/Videos.hs
+eg. https://github.com/tolysz/google-api/blob/master/src/Network/Google/Api/Youtube/Videos.hs
